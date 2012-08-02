@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Pro-prints</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Pro-Prints</string>
+    <string name="facebook_connect_button">Connect w/o Facebook</string>
+    <string name="google_connect_button">Connect w/o Google</string>
+
+</resources>
