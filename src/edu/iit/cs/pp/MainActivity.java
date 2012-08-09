@@ -1,6 +1,7 @@
 package edu.iit.cs.pp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -43,7 +44,8 @@ public class MainActivity extends Activity {
 
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			
+			Intent picManage = new Intent(v.getContext(), PicManageActivity.class);
+			startActivity(picManage);
 		}
     	
     }
