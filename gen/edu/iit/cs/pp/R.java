@@ -32,9 +32,9 @@ public final class R {
     public static final class id {
         public static final int button1=0x7f070000;
         public static final int button2=0x7f070001;
-        public static final int buttonApply=0x7f070005;
-        public static final int buttonPrint=0x7f070004;
-        public static final int buttonReset=0x7f070003;
+        public static final int buttonApply=0x7f070003;
+        public static final int buttonPrint=0x7f070005;
+        public static final int buttonReset=0x7f070004;
         public static final int camera=0x7f07000b;
         public static final int computer=0x7f070009;
         public static final int email=0x7f07000d;
