@@ -8,5 +8,16 @@
     <string name="facebook_connect_button">Connect w/o Facebook</string>
     <string name="google_connect_button">Connect w/o Google</string>
     <string name="image_desc">Loading</string>
+    
+    <string name="phone">Phone</string>
+    <string name="computer">Computer</string>
+    <string name="gamepad">Gamepad</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video</string>
+    <string name="email">Email</string>
 
+    <string name="button_apply">Apply</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_print">Print</string>
+    
 </resources>

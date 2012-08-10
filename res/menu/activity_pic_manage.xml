@@ -2,21 +2,48 @@
 
     <item
         android:id="@+id/menu_settings"
-        android:orderInCategory="100"
-        android:showAsAction="ifRoom|collapseActionView"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/menu_settings">
     </item>
     <item
         android:id="@+id/menu_help"
-        android:orderInCategory="100"
-        android:showAsAction="ifRoom|collapseActionView"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/menu_help">
     </item>
     <item
         android:id="@+id/menu_aboutus"
-        android:orderInCategory="100"
-        android:showAsAction="ifRoom|collapseActionView"
+        android:showAsAction="ifRoom|withText"
         android:title="@string/menu_aboutus">
     </item>
+    <item
+        android:id="@+id/phone"
+        android:icon="@drawable/phone"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/phone"/>
+    <item
+        android:id="@+id/computer"
+        android:icon="@drawable/computer"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/computer"/>
+    <item
+        android:id="@+id/gamepad"
+        android:icon="@drawable/gamepad"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/gamepad"/>
+    <item
+        android:id="@+id/camera"
+        android:icon="@drawable/camera"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/camera"/>
+    <item
+        android:id="@+id/video"
+        android:icon="@drawable/video"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/video"/>
+    <item
+        android:id="@+id/email"
+        android:icon="@drawable/email"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/email"/>
 
 </menu>

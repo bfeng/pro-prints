@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.MenuItem.OnActionExpandListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -29,7 +29,8 @@ public class PicManageActivity extends Activity {
 				parent.getItemAtPosition(position);
 				Intent picEdit = new Intent(v.getContext(),
 						PicEditActivity.class);
-				picEdit.putExtra("image", (Integer)parent.getItemAtPosition(position));
+				picEdit.putExtra("image",
+						(Integer) parent.getItemAtPosition(position));
 				startActivity(picEdit);
 			}
 
@@ -39,20 +40,14 @@ public class PicManageActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_pic_manage, menu);
-		MenuItem item = menu.findItem(R.id.menu_help);
-		item.setOnActionExpandListener(new OnActionExpandListener() {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.activity_pic_manage, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
 
-			public boolean onMenuItemActionCollapse(MenuItem item) {
-				return true;
-			}
-
-			public boolean onMenuItemActionExpand(MenuItem item) {
-				// TODO Auto-generated method stub
-				return true;
-			}
-
-		});
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
 		return true;
 	}
 }
