@@ -31,7 +31,7 @@ import android.widget.Toast;
  */
 public class MainActivity extends Activity {
 	private Uri mImageCaptureUri;
-	private ImageView mImageView;
+
 
 	private static final int PICK_FROM_CAMERA = 1;
 	private static final int CROP_FROM_CAMERA = 2;
@@ -121,9 +121,14 @@ public class MainActivity extends Activity {
 			Bundle extras = data.getExtras();
 
 			if (extras != null) {
-				Bitmap photo = extras.getParcelable("data");
+				
+				Intent editPic = new Intent(this, EditedPictureActivity.class);
+//				Bitmap photo = extras.getParcelable("data");
 
-				mImageView.setImageBitmap(photo);
+//				mImageView.setImageBitmap(photo);
+				startActivity(editPic);
+				
+				
 			}
 
 			File f = new File(mImageCaptureUri.getPath());
