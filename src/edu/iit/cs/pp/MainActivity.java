@@ -4,9 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.londatiga.android.CropOption;
-import net.londatiga.android.CropOptionAdapter;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -99,7 +96,7 @@ public class MainActivity extends Activity {
 			}
 
 		}
-		
+
 	}
 
 	@Override
