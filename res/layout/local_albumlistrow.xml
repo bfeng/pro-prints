@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!--
+          <ImageView android:layout_width="0dip"
+	            android:layout_weight="0.2"
+				android:layout_height="45dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="15dp"
+				android:id="@+id/ablumicon"
+				/>
+    -->
+
+    <ImageView
+        android:id="@+id/ablumicon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/loding_album"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/ablumtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="xxxx"
+            android:textColor="#000000"
+            android:textSize="18sp"
+             />
+
+        <TextView
+            android:id="@+id/ablum_img_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="(120)"
+            android:textColor="#747474"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+
+    <!--
+        <ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginTop="26dip"
+		android:layout_marginRight="10dip"		
+		android:background="@drawable/more_icon"/>
+    -->
+    <!--
+		android:layout_width="0dip"
+	    android:layout_weight="0.1"
+    -->
+
+</LinearLayout>

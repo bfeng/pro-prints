@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF" >
+    
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            
+            >
+         <TextView android:layout_width="fill_parent"
+    		       android:layout_height="30dp"
+    		       android:text="Settings"
+    		       android:textColor="#FFFFFF"
+    		       android:background="#C0C0C0"
+    		       android:textSize="20sp"
+    		       android:typeface="serif"
+    		       android:gravity="center"/>
+    
+    </LinearLayout>
+    
+     <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            
+            >
+         
+         <TextView android:layout_width="fill_parent"
+    		       android:layout_height="30dp"
+    		       android:text="Customer Info"
+    		       android:textColor="#000000"
+    		       android:textSize="18sp"
+    		       android:textStyle="bold" 
+    		         		       
+   		           />
+         
+          <TextView 
+              android:layout_width="wrap_content"
+    		       android:layout_height="40dp"
+    		       android:text="First Name"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		       android:layout_marginTop="30dp" 
+    		       android:layout_marginLeft="30dp" 
+    		        		       
+   		           />
+         <EditText 
+                   android:id="@+id/firstNameEdt"
+                   android:layout_width="fill_parent"
+    		       android:layout_height="40dp"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		       
+    		       android:layout_marginTop="30dp" 
+    		       android:layout_marginLeft="140dp" 
+    		       	       
+   		           />
+          <TextView 
+              android:layout_width="wrap_content"
+    		       android:layout_height="40dp"
+    		       android:text="Last Name"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		       
+    		       android:layout_marginTop="70dp" 
+    		       android:layout_marginLeft="30dp" 
+    		       		       
+   		           />
+         <EditText 
+                   android:id="@+id/lastNameEdt"
+                   android:layout_width="fill_parent"
+    		       android:layout_height="40dp"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		        
+    		       android:layout_marginTop="70dp" 
+    		       android:layout_marginLeft="140dp" 
+    		       	       
+   		           />
+         
+          <TextView 
+              android:layout_width="wrap_content"
+    		       android:layout_height="40dp"
+    		       android:text="Email"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp" 
+    		       android:layout_marginTop="110dp" 
+    		       android:layout_marginLeft="60dp" 
+    		       		       
+   		           />
+         <EditText 
+                   android:id="@+id/emailEdt"
+                   android:layout_width="fill_parent"
+    		       android:layout_height="40dp"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+      		       android:layout_marginTop="110dp" 
+    		       android:layout_marginLeft="140dp" 
+    		       	       
+   		           />
+         
+         
+         <TextView 
+              android:layout_width="wrap_content"
+    		       android:layout_height="40dp"
+    		       android:text="Phone No"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"    		        
+    		       android:layout_marginTop="150dp" 
+    		       android:layout_marginLeft="40dp" 
+    		       		       
+   		           />
+         <EditText 
+                   android:id="@+id/phNumberEdt"
+                   android:layout_width="fill_parent"
+    		       android:layout_height="40dp"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		        
+    		       android:layout_marginTop="150dp" 
+    		       android:layout_marginLeft="140dp"
+    		       android:phoneNumber="true" 
+    		       
+    		       	       
+   		           />
+ 
+                  <TextView 
+              		android:layout_width="wrap_content"
+    		       android:layout_height="40dp"
+    		       android:text="Checkout URL"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"    		        
+    		       android:layout_marginTop="190dp" 
+    		       android:layout_marginLeft="40dp"
+    		       android:visibility="invisible" />
+                  
+                  <EditText 
+                   android:id="@+id/checkout_url"
+                   android:layout_width="fill_parent"
+    		       android:layout_height="40dp"
+    		       android:textColor="#000000"
+    		       android:textSize="13sp"
+    		       android:visibility="invisible"
+    		       android:layout_marginTop="190dp" 
+    		       android:layout_marginLeft="140dp"
+   		           />
+                  
+         
+         </RelativeLayout>
+         
+     
+     
+     <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            
+            >
+         
+             <TextView android:layout_width="fill_parent"
+    		       android:layout_height="30dp"
+    		       android:text="Select Any Vendor"
+    		       android:textColor="#000000"
+    		       android:textSize="18sp"
+    		       android:textStyle="bold" 
+    		         		       
+   		           />
+             
+             <RadioGroup
+					android:id="@+id/radioGroup"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_x="37px"
+					android:layout_y="280px"
+					android:orientation="vertical"
+					android:layout_marginTop="30dp"
+					android:layout_marginLeft="30dp"
+			>
+				<RadioButton
+					android:id="@+id/radioWag"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="WAG App"
+					android:textColor="#000000"
+					android:textSize="18sp"
+				>
+				</RadioButton>
+				<RadioButton
+					android:id="@+id/radioFaceBook"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="FaceBook"
+					android:textColor="#000000"
+					android:textSize="18sp"
+				>
+				</RadioButton>
+				<RadioButton
+					android:id="@+id/radioVendor"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Vendor"
+					android:textColor="#000000"
+					android:textSize="18sp"
+				>
+				</RadioButton>
+		</RadioGroup>
+         
+             <Button
+					android:id="@+id/saveBtn"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Save"
+					android:textStyle="bold"
+					
+					android:textColor="#ffffff"
+					android:textSize="18sp"
+					android:layout_marginTop="180dp"
+					android:gravity="center"
+					
+				/>
+             
+         </RelativeLayout>
+
+</LinearLayout>

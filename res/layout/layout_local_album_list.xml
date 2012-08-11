@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/widget38"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/title_tile_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- android:background="@drawable/topnav" -->
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dip"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:text="Select Album"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+         <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/camera"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/divider"
+        android:drawSelectorOnTop="false" >
+    </ListView>
+    <TextView android:text="@string/list_empty_msg" android:id="@+id/txt_view_album_list_empty"
+		android:layout_width="fill_parent" android:layout_height="20dp"
+		android:layout_marginLeft="5dp" android:textStyle="bold"
+		android:textColor="#000000" android:layout_weight="0.10"
+		android:visibility="gone" android:gravity="center"
+		android:layout_marginTop="0dp"></TextView>
+
+</LinearLayout>
