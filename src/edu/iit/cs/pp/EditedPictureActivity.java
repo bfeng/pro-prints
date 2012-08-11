@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -24,7 +25,7 @@ import com.usablenet.walgreen.appathon.sdk.WagCheckoutContextException;
 import com.usablenet.walgreen.appathon.sdk.WagCheckoutContextFactory;
 import com.usablenet.walgreen.appathon.utils.Constants;
 
-public class EditedPictureActivity extends Activity {
+public class EditedPictureActivity extends Activity implements OnClickListener {
 
 	private ImageView mImageView;
 	private Button printBtn;
@@ -115,35 +116,29 @@ public class EditedPictureActivity extends Activity {
 		setContentView(R.layout.edited_picture);
 
 		printBtn = (Button) findViewById(R.id.btn_print);
-		printBtn.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View arg0) {
-				Uri path = (Uri) getIntent().getParcelableExtra("path");
-				final File pic = new File(getRealPathFromURI(path));
-				new Thread(new Runnable() {
-
-					@Override
-					public void run() {
-
-						if (mApiContext == null) {
-
-							if (!initializeSdk()) {
-
-								mUploadFileArray.add(pic);
-								mApiContext.uploadImages(mUploadFileArray);
-
-								mApiContext = null;
-							} else {
-							}
-
-						} else {
-						}
-
-					}
-				}).start();
-			}
-		});
+		printBtn.setOnClickListener(this);
+		// new View.OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View arg0) {
+		//
+		// if (mApiContext == null) {
+		//
+		// if (!initializeSdk()) {
+		//
+		// mUploadFileArray.add(pic);
+		// mApiContext.uploadImages(mUploadFileArray);
+		//
+		// mApiContext = null;
+		// } else {
+		// }
+		//
+		// } else {
+		// }
+		//
+		// }
+		// });
 
 		mImageView = (ImageView) findViewById(R.id.iv_photo);
 
@@ -159,6 +154,26 @@ public class EditedPictureActivity extends Activity {
 				.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
 		cursor.moveToFirst();
 		return cursor.getString(column_index);
+	}
+
+	@Override
+	public void onClick(View v) {
+		Uri path = (Uri) getIntent().getParcelableExtra("path");
+		final File pic = new File(getRealPathFromURI(path));
+		// TODO Auto-generated method stub
+		if (mApiContext == null) {
+
+			if (!initializeSdk()) {
+				//
+				// mUploadFileArray.add(pic);
+				// mApiContext.uploadImages(mUploadFileArray);
+				//
+				// mApiContext = null;
+			} else {
+			}
+
+		} else {
+		}
 	}
 
 }
