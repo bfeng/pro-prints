@@ -1,6 +1,11 @@
 package edu.iit.cs.pp;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 
 import org.json.JSONObject;
@@ -1183,13 +1188,70 @@ public class LocalAlbumGallery extends Activity implements OnItemClickListener,
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View view, int pPosition,
 			long arg3) {
-		FrameLayout parentLayout = (FrameLayout) view;
-		CheckBox cb = (CheckBox) parentLayout.getChildAt(1);
-		ImageView imgView = (ImageView) parentLayout.getChildAt(0);
-		callCheckBoxValidations(cb, imgView);
+//		FrameLayout parentLayout = (FrameLayout) view;
+//		CheckBox cb = (CheckBox) parentLayout.getChildAt(1);
+//		ImageView imgView = (ImageView) parentLayout.getChildAt(0);
+//		callCheckBoxValidations(cb, imgView);
+		
+		//if (mThumbnailsselection[0]) {
+				//mUploadFileArray.add(new File(mArrPath[0]));
+				//mThumbnailsselection[0] = false;
+				
+				
+				Bitmap photo = loadBitmap(mArrPath[0]); //create file from path
+				//Log.i(photo, "pic path");
+				Intent editPic = new Intent(this, EditedPictureActivity.class);
+				editPic.putExtra("data", photo);
+				startActivity(editPic);
+		//}
 
 	}
 
+	public Bitmap loadBitmap(String url)
+	{
+	    Bitmap bm = null;
+	    InputStream is = null;
+	    BufferedInputStream bis = null;
+	    try 
+	    {
+	        URLConnection conn = new URL(url).openConnection();
+	        conn.connect();
+	        is = conn.getInputStream();
+	        bis = new BufferedInputStream(is, 8192);
+	        bm = BitmapFactory.decodeStream(bis);
+	    }
+	    catch (Exception e) 
+	    {
+	        e.printStackTrace();
+	    }
+	    finally {
+	        if (bis != null) 
+	        {
+	            try 
+	            {
+	                bis.close();
+	            }
+	            catch (IOException e) 
+	            {
+	                e.printStackTrace();
+	            }
+	        }
+	        if (is != null) 
+	        {
+	            try 
+	            {
+	                is.close();
+	            }
+	            catch (IOException e) 
+	            {
+	                e.printStackTrace();
+	            }
+	        }
+	    }
+	    return bm;
+	}
+
+	
 	// ---------------------- for settings option menu------------------------
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
