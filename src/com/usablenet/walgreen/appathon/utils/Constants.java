@@ -12,7 +12,7 @@ package com.usablenet.walgreen.appathon.utils;
 
 public class Constants {
 
-    public static final boolean IS_PRODUCTION_DEMO = true;
+    public static final boolean IS_PRODUCTION_DEMO = false;
     public static final String STAG_API_KEY = "89df9168988ca48e3c37bda983972ed4";
     public static final String PROD_API_KEY = "89df9168988ca48e3c37bda983972ed4";
     public static final String AFF_ID = "extest1";

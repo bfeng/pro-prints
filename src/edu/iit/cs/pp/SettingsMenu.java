@@ -34,14 +34,14 @@ public class SettingsMenu extends Activity {
 	
 	public static final String FIRST_NAME = "fName";
 	public static final String LAST_NAME = "lName";
-	public static final String EMAIL = "email";
-	public static final String PHONE_NUMBER = "phNumber";
-	public static final String AFF_ID = "affId";
-	public static final String APP_KEY = "apiKey";
+	public static final String EMAIL = "email@mail.com";
+	public static final String PHONE_NUMBER = "1234567";
+	public static final String AFF_ID = "extest1.";
+	public static final String APP_KEY = "89df9168988ca48e3c37bda983972ed4";
 	public static final String CHECKOUT_URL  = "";
 	
 	public static final String VEN_GENERAL = "extest1";
-	public static final String VEN_GENERAL_API_KEY = "*********Vendor API key******";
+	public static final String VEN_GENERAL_API_KEY = "";
 	public static final String VEN_WAG = "photon";
 	public static final String VEN_FACEBOOK = "extest2";
 	public static final String VEN_FACEBOOK_API_KEY = "*********Facebook user API key******";

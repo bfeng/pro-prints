@@ -34,80 +34,6 @@ public class EditedPictureActivity extends Activity implements OnClickListener {
 	private SharedPreferences prefs;
 
 	private ArrayList<File> mUploadFileArray = new ArrayList<File>();
-	UserInfoBean user;
-
-	private UserInfoBean getUser() {
-		UserInfoBean user = new UserInfoBean();
-		if (Constants.sHasToShowSettingScreen) {
-			String mJsonUser = prefs.getString("Share_userInfo", null);
-			try {
-
-				if (null != mJsonUser) {
-					JSONObject j = new JSONObject(mJsonUser);
-					user.fName = j.getString(SettingsMenu.FIRST_NAME);
-					user.lName = j.getString(SettingsMenu.LAST_NAME);
-					user.email = j.getString(SettingsMenu.EMAIL);
-					user.phNumber = j.getString(SettingsMenu.PHONE_NUMBER);
-					user.affId = j.getString(SettingsMenu.AFF_ID);
-					user.apiKey = j.getString(SettingsMenu.APP_KEY);
-					user.checkoutUrl = j.getString(SettingsMenu.CHECKOUT_URL);
-				}
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		return user;
-	}
-
-	private boolean initializeSdk() {
-		if (mApiContext == null) {
-			try {
-				mApiContext = WagCheckoutContextFactory
-						.createContext(getApplication());
-			} catch (WagCheckoutContextException e1) {
-				e1.printStackTrace();
-			}
-			try {
-				WagCheckoutContext.EnvironmentType environment = null;
-
-				if (Constants.IS_PRODUCTION_DEMO) {
-					environment = WagCheckoutContext.EnvironmentType.PRODUCTION;
-				} else {
-					environment = WagCheckoutContext.EnvironmentType.DEVELOPMENT;
-				}
-				CustomerInfo customerInfo = new CustomerInfo();
-				user = getUser();
-				if (user != null) {
-
-					customerInfo.setFirstName(user.getFirstName());
-					customerInfo.setLastName(user.getLastName());
-					customerInfo.setEmail(user.email);
-					customerInfo.setPhone(user.phNumber);
-					if (Constants.DEBUG) {
-						Log.i("First Name>>>>>>>>>> ", "" + user.getFirstName());
-						Log.i("Last Name>>>>>>>>>> ", "" + user.getLastName());
-						Log.i("Aff Id>>>>>>>>>> ", "" + user.getAff_Id());
-						Log.i("API Key>>>>>>>>>> ", "" + user.getApiKey());
-						Log.i("checkout URL >>>>>>>>>> ",
-								"" + user.getCheckoutUrl());
-					}
-
-					mApiContext.init(user.getAff_Id(), user.getApiKey(),
-							customerInfo, Constants.PUBLISHER_ID, null,
-							environment, "3.1.1");
-				}
-
-			} catch (WagCheckoutContextException e) {
-
-				e.printStackTrace();
-				return false;
-			}
-			return true;
-		}
-		return false;
-	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -118,27 +44,6 @@ public class EditedPictureActivity extends Activity implements OnClickListener {
 		printBtn = (Button) findViewById(R.id.btn_print);
 
 		printBtn.setOnClickListener(this);
-		// new View.OnClickListener() {
-		//
-		// @Override
-		// public void onClick(View arg0) {
-		//
-		// if (mApiContext == null) {
-		//
-		// if (!initializeSdk()) {
-		//
-		// mUploadFileArray.add(pic);
-		// mApiContext.uploadImages(mUploadFileArray);
-		//
-		// mApiContext = null;
-		// } else {
-		// }
-		//
-		// } else {
-		// }
-		//
-		// }
-		// });
 
 		mImageView = (ImageView) findViewById(R.id.iv_photo);
 
@@ -159,20 +64,24 @@ public class EditedPictureActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		Uri path = (Uri) getIntent().getParcelableExtra("path");
-		final File pic = new File(getRealPathFromURI(path));
+		Log.i(path.toString().substring(7).toString(), "PATH NAME");
+		final File pic = new File(path.toString().substring(7));
+
 		// TODO Auto-generated method stub
 		if (mApiContext == null) {
-
-			if (!initializeSdk()) {
-				//
-				// mUploadFileArray.add(pic);
-				// mApiContext.uploadImages(mUploadFileArray);
-				//
-				// mApiContext = null;
-			} else {
+			try {
+				mApiContext = WagCheckoutContextFactory.createContext(getApplication());
+				mApiContext.init(Constants.AFF_ID, Constants.PROD_API_KEY,null, null, null, WagCheckoutContext.EnvironmentType.DEVELOPMENT, "1.0.1");
+				mApiContext.uploadImages(mUploadFileArray);
 			}
-
-		} else {
+			catch (WagCheckoutContextException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			mUploadFileArray.add(pic);
+			mApiContext.uploadImages(mUploadFileArray);
 		}
 	}
 
