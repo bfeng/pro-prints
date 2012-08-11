@@ -1,8 +1,14 @@
 package edu.iit.cs.pp;
 
+import java.io.File;
+
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -57,13 +63,20 @@ public class MainActivity extends Activity {
 						LocalAlbumsList.class);
 				startActivity(localAlbumsList);
 			} else {
-				Intent intent = new Intent();
+				Intent intent 	 = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+				
+				Uri mImageCaptureUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
+								   "tmp_avatar_" + String.valueOf(System.currentTimeMillis()) + ".jpg"));
 
-				intent.setType("image/*");
-				intent.setAction(Intent.ACTION_GET_CONTENT);
-				startActivityForResult(
-						Intent.createChooser(intent, "Complete action using"),
-						0);
+				intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
+
+				try {
+					intent.putExtra("return-data", true);
+					
+					startActivityForResult(intent, 1);
+				} catch (ActivityNotFoundException e) {
+					e.printStackTrace();
+				}
 			}
 
 		}
