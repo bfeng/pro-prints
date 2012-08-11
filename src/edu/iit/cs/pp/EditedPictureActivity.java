@@ -115,7 +115,7 @@ public class EditedPictureActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edited_picture);
 
-		printBtn = (Button) findViewById(R.id.btn_print);
+		printBtn = (Button) findViewById(R.id.btn_crop);
 
 		printBtn.setOnClickListener(this);
 		// new View.OnClickListener() {
