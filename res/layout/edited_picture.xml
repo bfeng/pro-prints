@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+	    android:gravity="center"
+	    android:textStyle="bold"
+	    android:textSize="17sp"
+	    android:text="Your edited image"/>
+		
+	<ImageView
+		android:id="@+id/iv_photo"
+		android:layout_marginTop="10dp"
+		android:layout_gravity="center_horizontal"
+		android:layout_width="fill_parent" 		 
+		android:layout_height="200dp"/>
+
+	<Button
+	    android:id="@+id/btn_crop"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Print image" />
+		
+</LinearLayout>
