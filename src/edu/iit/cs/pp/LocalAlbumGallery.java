@@ -487,7 +487,7 @@ public class LocalAlbumGallery extends Activity implements OnItemClickListener,
 	private int mUploadFailureCount = 0;
 	private int count = 0;
 
-	 Handler handler = new Handler() {
+	Handler handler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
 
 			switch (msg.what) {
@@ -951,9 +951,9 @@ public class LocalAlbumGallery extends Activity implements OnItemClickListener,
 		this.mThumbnailsselection = new boolean[mTotalSize];
 		for (int i = 0; i < mTotalSize; i++) {
 			mArrPath[i] = mAlbum.getAlbumThumbnailList().get(i).getURI();
-			mThumbnails[i] = AlbumThumbnailBean.getThumb(getApplicationContext(),
-					mAlbum.getAlbumThumbnailList().get(i).getThumbNailID(),
-					mArrPath[i]);
+			mThumbnails[i] = AlbumThumbnailBean.getThumb(
+					getApplicationContext(), mAlbum.getAlbumThumbnailList()
+							.get(i).getThumbNailID(), mArrPath[i]);
 
 		}
 
