@@ -1,7 +1,7 @@
 /*
 * Copyright 2012 Walgreen Co. All rights reserved *
 
-* Licensed under the Walgreens Developer Program and Portal Terms of Use and API License Agreement, Version 1.0 (the “Terms of Use”)
+* Licensed under the Walgreens Developer Program and Portal Terms of Use and API License Agreement, Version 1.0 (the ï¿½Terms of Useï¿½)
 * You may not use this file except in compliance with the License.
 * A copy of the License is located at https://developer.walgreens.com/page/terms-use
 *
@@ -17,7 +17,7 @@ public class Constants {
     public static final String PROD_API_KEY = "89df9168988ca48e3c37bda983972ed4";
     public static final String AFF_ID = "extest1";
     public static final boolean DEBUG = true;
-    public static final String LOG_TAG = "AppathonDemo";
+    public static final String LOG_TAG = "pro-prints";
     public static boolean sHasToShowSettingScreen = true;
     
     public static final String PUBLISHER_ID = "";
