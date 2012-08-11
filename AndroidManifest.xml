@@ -35,9 +35,14 @@
                 android:value="edu.iit.cs.pp.PicManageActivity" />
         </activity>
         
+        <activity
+            android:name=".EditedPictureActivity"
+            android:label="@string/app_title" >
+        </activity>
+                
         <service android:name="com.usablenet.walgreen.appathon.sdk.core.WagPrintService"></service>
-        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".StartActivity" android:screenOrientation="portrait"/>
         <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".UploadPhoto" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".StartActivity" android:screenOrientation="portrait"/>
         <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".LocalAlbumGallery" android:screenOrientation="portrait"/>
         <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".LocalAlbumsList" android:screenOrientation="portrait"/>
         <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".Html5CheckoutContainer" android:screenOrientation="portrait"/>

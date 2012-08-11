@@ -1,6 +1,7 @@
 package edu.iit.cs.pp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -15,7 +16,10 @@ public class EditedPictureActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edited_picture);
 		
-		Bitmap photo = savedInstanceState.getParcelable("data");
+		mImageView = (ImageView)findViewById(R.id.iv_photo);
+		
+		Bitmap photo =  (Bitmap)this.getIntent().getParcelableExtra("data");
+		
 		mImageView.setImageBitmap(photo);
 	}
 

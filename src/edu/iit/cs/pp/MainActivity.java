@@ -122,12 +122,10 @@ public class MainActivity extends Activity {
 
 			if (extras != null) {
 				
+				Bitmap photo = extras.getParcelable("data");
 				Intent editPic = new Intent(this, EditedPictureActivity.class);
-//				Bitmap photo = extras.getParcelable("data");
-
-//				mImageView.setImageBitmap(photo);
+				editPic.putExtra("data", photo);
 				startActivity(editPic);
-				
 				
 			}
 
