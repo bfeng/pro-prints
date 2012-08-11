@@ -20,4 +20,31 @@
     <string name="button_reset">Reset</string>
     <string name="button_print">Print</string>
     
+ <string name="hello">Hello World, StartActivity!</string>
+ <string name="instruction">Sample application to demonstrate the use of Walgreens Quick Print SDK.\n\n Please tap on View image to continue the flow.</string>
+ 
+ <string name="list_empty_msg">There are no Shopping Lists.</string>
+ <string name="toast_sdcard_msg">Please insert SD card</string>
+ <string name="quick_print_UploadFailed_title">Service Unavailable</string>
+ <string name="quick_print_UploadFailed_mesg">The service is temporarily unavailable. Please try again later.</string>
+ <string name="quick_print_Confirm_Mesg_Title1">Photo Upload Complete</string>
+ <string name="quick_print_Confirm_Mesg_Title2">Photo already added to cart</string> 
+ <string name="quick_print_Confirm_Mesg">Would you like to upload more photos?</string> 
+ <string name="quick_print_cancel_upload_title">Cancel Upload</string>
+ <string name="quick_print_cancel_upload_mesg">Would you like to cancel the upload?</string>
+ <string name="quick_print_confirm_upload_mesg">Your Photo(s) have been uploaded. Would you like to proceed with checkout?</string>
+ <string name="quick_print_Max_Limit_Mesg_Title">Maximum Pictures Uploaded</string>
+ <string name="quick_print_Max_Limit_Mesg">You have reached the maximum for this order.</string>
+ <string name="Not_enough_memory_Mesg">You do not have enough space in SD card to save the photo.</string>
+ <string name="quick_print_Time_Out_UploadFailed_title">Network Issue</string>
+ <string name="quick_print_Time_Out_UploadFailed_Mesg">Unable to upload image due to network. Please try again later.</string>
+ <string name="quick_print_empty_album_mesg">Please use Camera to add picture(s) for print.</string>
+ <string name="quick_print_checkout_err_mesg">We\'re sorry, there was an error with your checkout. Please try again.</string>
+ <string name="version">Version 1.0</string>
+ <string name="build_number">Build 5002</string>
+ <string name="copyright">2012 \u00A9 Walgreen Co. All rights are reserved</string>
+ <string name="alert_InternetConnection_title">Connection Failed</string>
+ <string name="alert_InternetConnection">We were unable to establish a connection. Please check your settings and try again.</string>
+ 
+    
 </resources>

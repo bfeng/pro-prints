@@ -14,7 +14,7 @@ public class PicEditActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pic_edit);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		ImageView image = (ImageView) findViewById(R.id.imageView);
 		Intent intent = this.getIntent();
@@ -29,11 +29,11 @@ public class PicEditActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
+		/*switch (item.getItemId()) {
 		case android.R.id.home:
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
-		}
+		}*/
 		return super.onOptionsItemSelected(item);
 	}
 

@@ -44,8 +44,12 @@ public class MainActivity extends Activity {
 
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Intent picManage = new Intent(v.getContext(), PicManageActivity.class);
-			startActivity(picManage);
+			//Intent picManage = new Intent(v.getContext(), PicManageActivity.class);
+			//startActivity(picManage);
+			
+			Intent localAlbumsList = new Intent(v.getContext(), LocalAlbumsList.class);
+			startActivity(localAlbumsList);
+			
 		}
     	
     }

@@ -4,8 +4,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="15" />
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -34,6 +34,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="edu.iit.cs.pp.PicManageActivity" />
         </activity>
+        
+        <service android:name="com.usablenet.walgreen.appathon.sdk.core.WagPrintService"></service>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".StartActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".UploadPhoto" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".LocalAlbumGallery" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".LocalAlbumsList" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".Html5CheckoutContainer" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".SettingsMenu" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".About" android:screenOrientation="portrait"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name=".PhotoLanding" android:screenOrientation="portrait"/>
+   
+        
     </application>
 
 </manifest>
